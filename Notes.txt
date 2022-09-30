@@ -1,0 +1,5 @@
+Columsn that matter:
+
+Season, Holiday, weekday, workingda, weather, temp, atemp, humidity windspeed, 
+
+Target- cnt
