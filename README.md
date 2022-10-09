@@ -24,18 +24,24 @@ The business has shared their 2 year data from Jan 1,2018 to Dec 31st 2019 for u
 ## Business Goal:
 You are required to model the demand for shared bikes with the available independent variables. It will be used by the management to understand how exactly the demands vary with different features. They can accordingly manipulate the business strategy to meet the demand levels and meet the customer's expectations. Further, the model will be a good way for management to understand the demand dynamics of a new market. 
 
-
 ## Files: 
 - **day.csv** : the main data source
-- **Final_Model.ipynb** : The final model created to predict the count of users.
+- **Bike_Sharing_Analysis.ipynb** : The final model created to predict the count of users.
 
 ## Libraries:
 - Pandas
 - Numpy
-- Matplotlib and Seaborn
+- Matplotlib
+- Seaborn
 - statsmodel
 - Scikit-Learn
-- Pickle
+
+## Important Observations:
+I noticed some of these observations during the analysis:
+1. The test-set makes a significant difference in the modelling. I used a 80:20 ratio (*test_size =  0.2*) for training the model. Choosing other than this results in different features to be removed.
+2. Seed was set at **42**.
+3. The value **"yr"** has a massive effect on the model. Logically speaking, the value of year should have no difference on the model i.e. user demand, yet removing this causes the $R^{2}$ to fall from  ~0.84 to ~0.59. 
+
 
 ## Conclusions
 - Conclusion 1 from the analysis
@@ -46,7 +52,7 @@ You are required to model the demand for shared bikes with the available indepen
 # Replication
 To replicate the results in your local system, download the following files:
  - day.csv
- - Final_Model.ipynb
+ - Bike_Sharing_Analysis.ipynb
 
 ## Contact
 Created by [@jaegarbomb]
