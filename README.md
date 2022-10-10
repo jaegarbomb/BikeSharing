@@ -6,6 +6,7 @@
 * [Business Goal](#business-goal)
 * [Files](#files)
 * [Libraries](#libraries)
+* [Important Observations](#important-observations)
 * [Conclusions](#conclusions)
 * [Replication](#replication)
 * [Acknowledgements](#acknowledgements)
@@ -40,7 +41,7 @@ You are required to model the demand for shared bikes with the available indepen
 I noticed some of these observations during the analysis:
 1. The test-set makes a significant difference in the modelling. I used a 80:20 ratio (*test_size =  0.2*) for training the model. Choosing other than this results in different features to be removed.
 2. Seed was set at **42**.
-3. The value **"yr"** has a massive effect on the model. Logically speaking, the value of year should have no difference on the model i.e. user demand, yet removing this causes the $R^{2}$ to fall from  ~0.84 to ~0.59. 
+3. The value **"yr"** has a massive effect on the model. Logically speaking, the value of *year* should have no difference on the model i.e. user demand, yet removing this causes the $R^{2}$ to fall from  ~0.84 to ~0.59. 
 
 
 ## Conclusions
