@@ -1,6 +1,4 @@
-# Project Name
-<h3> Bike Sharing Case Study</h3>
-
+# Bike Sharing Case Study
 ## Table of Contents
 * [General Info](#general-information)
 * [Business Goal](#business-goal)
@@ -9,9 +7,6 @@
 * [Important Observations](#important-observations)
 * [Conclusions](#conclusions)
 * [Replication](#replication)
-* [Acknowledgements](#acknowledgements)
-
-<!-- You can include any other section that is pertinent to your problem -->
 
 ## General Information
 A bike-sharing system is a service in which bikes are made available for shared use to individuals on a short term basis for a price or free. Many bike share systems allow people to borrow a bike from a "dock" which is usually computer-controlled wherein the user enters the payment information, and the system unlocks it. This bike can then be returned to another dock belonging to the same system.
@@ -32,28 +27,26 @@ You are required to model the demand for shared bikes with the available indepen
 ## Libraries:
 - Pandas
 - Numpy
-- Matplotlib
-- Seaborn
-- statsmodel
-- Scikit-Learn
+- Matplotlib and Seaborn
+- statsmodels
+- Scikit-learn
 
 ## Important Observations:
-I noticed some of these observations during the analysis:
-1. The test-set makes a significant difference in the modelling. I used a 80:20 ratio (*test_size =  0.2*) for training the model. Choosing other than this results in different features to be removed.
+I noticed some of these observations during the analysis and modelling:
+
+1. The test-set makes a significant difference in the modelling. I used a 80:20 ratio (**test_size =  0.2**) for training the model. Choosing other than this results in different features to be removed.
 2. Seed was set at **42**.
 3. The value **"yr"** has a massive effect on the model. Logically speaking, the value of *year* should have no difference on the model i.e. user demand, yet removing this causes the $R^{2}$ to fall from  ~0.84 to ~0.59. 
-
+4. *atemp* or *temp* and *hum* showed a very High Variance Inflation factor (VIF). By logic, these should have been removed. Yet, when the variables are removed, the $R^2$ value fell from **0.84** to **0.58**. Thus it makes sense to keep these, as temperature and humidity are important factors for customer to decide whether they want to use a bike or not.
 
 ## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
+- **Summer** and **Winter** are the seasons to focus on for business growth.
+- **Humidity** and **windspeed** reduces decreases usage, thus having a weather forecast model to predict this is beneficial as we can reduce the operational costs during this time.
+- **Months of July to Nov** sees the most use. This corresponds to the seasons of demand.
+- **Working days** (with the exception of Tuesday) sees a high utilisation of bikes.
+- **Weather Situation**: clear weather and mist sees high usage of bikes.
 
-# Replication
+## Replication
 To replicate the results in your local system, download the following files:
  - day.csv
  - Bike_Sharing_Analysis.ipynb
-
-## Contact
-Created by [@jaegarbomb]
